@@ -1,0 +1,299 @@
+Using pre-set license
+Built from '2020.3/release' branch; Version is '2020.3.12f1 (b3b2c6512326) revision 11776710'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19043.1348; Version 2009; 64bit' Language: 'uk' Physical Memory: 16319 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+D:\Unity\Editors\2020.3.12f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/Unity/My projects/TaskToSurvive
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+50583
+Successfully changed project path to: D:/Unity/My projects/TaskToSurvive
+D:/Unity/My projects/TaskToSurvive
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 51.14 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.12f1 (b3b2c6512326)
+[Subsystems] Discovering subsystems at path D:/Unity/Editors/2020.3.12f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Unity/My projects/TaskToSurvive/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1060 (ID=0x1c60)
+    Vendor:   
+    VRAM:     6052 MB
+    Driver:   30.0.14.7212
+Initialize mono
+Mono path[0] = 'D:/Unity/Editors/2020.3.12f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/Editors/2020.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/Unity/Editors/2020.3.12f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56124
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity/Editors/2020.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001365 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 44.67 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.553 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.004660 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 52.03 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.488 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.13 seconds
+Refreshing native plugins compatible for Editor in 0.45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1870 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 83.6 MB.
+System memory in use after: 83.7 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2305.
+Total: 3.050500 ms (FindLiveObjects: 0.169700 ms CreateObjectMapping: 0.065000 ms MarkObjects: 2.714500 ms  DeleteObjects: 0.099900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/AssetsStore/DigitalKonstrukt
+  artifactKey: Guid(7ef126c584a63194bb0172874baa644e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetsStore/DigitalKonstrukt using Guid(7ef126c584a63194bb0172874baa644e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f63e736e140b6fbc014f3cce0a37f515') in 0.013436 seconds 
+  Import took 0.016947 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007059 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.11 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+[ScriptCompilation] NOT recompiling all scripts because this is an import worker process. Reason to compile was: Define symbols changed
+NullReferenceException: Object reference not set to an instance of an object
+  at StarterAssets.PackageChecker.CheckPackage () [0x001c2] in D:\Unity\My projects\TaskToSurvive\Assets\StarterAssets\Editor\PackageChecker\PackageChecker.cs:105 
+
+(Filename: Assets/StarterAssets/Editor/PackageChecker/PackageChecker.cs Line: 105)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.584 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.47 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1866 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.4 MB.
+System memory in use after: 83.6 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2322.
+Total: 3.917800 ms (FindLiveObjects: 0.382200 ms CreateObjectMapping: 0.102700 ms MarkObjects: 2.542000 ms  DeleteObjects: 0.889600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1347.822926 seconds.
+  path: Assets/StarterAssets/InputSystem
+  artifactKey: Guid(48c9acd554a28814b922162e3fa889b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StarterAssets/InputSystem using Guid(48c9acd554a28814b922162e3fa889b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40c0328e2710e82cf37b03319b0d6c42') in 0.016228 seconds 
+  Import took 0.020685 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004105 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+[ScriptCompilation] NOT recompiling all scripts because this is an import worker process. Reason to compile was: Define symbols changed
+NullReferenceException: Object reference not set to an instance of an object
+  at StarterAssets.PackageChecker.CheckPackage () [0x001c2] in D:\Unity\My projects\TaskToSurvive\Assets\AssetsStore\StarterAssets\Editor\PackageChecker\PackageChecker.cs:105 
+
+(Filename: Assets/AssetsStore/StarterAssets/Editor/PackageChecker/PackageChecker.cs Line: 105)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.388 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.4 MB.
+System memory in use after: 83.6 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2324.
+Total: 3.460500 ms (FindLiveObjects: 0.208400 ms CreateObjectMapping: 0.078300 ms MarkObjects: 2.355200 ms  DeleteObjects: 0.817700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004251 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+[ScriptCompilation] NOT recompiling all scripts because this is an import worker process. Reason to compile was: Define symbols changed
+NullReferenceException: Object reference not set to an instance of an object
+  at StarterAssets.PackageChecker.CheckPackage () [0x001c2] in D:\Unity\My projects\TaskToSurvive\Assets\AssetsStore\StarterAssets\Editor\PackageChecker\PackageChecker.cs:105 
+
+(Filename: Assets/AssetsStore/StarterAssets/Editor/PackageChecker/PackageChecker.cs Line: 105)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.389 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.47 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.5 MB.
+System memory in use after: 83.7 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2326.
+Total: 4.336000 ms (FindLiveObjects: 0.187000 ms CreateObjectMapping: 0.062700 ms MarkObjects: 3.332900 ms  DeleteObjects: 0.752200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004562 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+[ScriptCompilation] NOT recompiling all scripts because this is an import worker process. Reason to compile was: Define symbols changed
+NullReferenceException: Object reference not set to an instance of an object
+  at StarterAssets.PackageChecker.CheckPackage () [0x001c2] in D:\Unity\My projects\TaskToSurvive\Assets\AssetsStore\StarterAssets\Editor\PackageChecker\PackageChecker.cs:105 
+
+(Filename: Assets/AssetsStore/StarterAssets/Editor/PackageChecker/PackageChecker.cs Line: 105)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.377 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.5 MB.
+System memory in use after: 83.7 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2328.
+Total: 3.509200 ms (FindLiveObjects: 0.182100 ms CreateObjectMapping: 0.076800 ms MarkObjects: 2.375800 ms  DeleteObjects: 0.873500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 88.597019 seconds.
+  path: Assets/_Scripts/Controllers/GameController.cs
+  artifactKey: Guid(c2ea1c9f965c47dd9310c2750638e25b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scripts/Controllers/GameController.cs using Guid(c2ea1c9f965c47dd9310c2750638e25b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ded7e9fab7e20ae3cd63f94c5462ec9') in 0.031148 seconds 
+  Import took 0.035010 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.358339 seconds.
+  path: Assets/_Scripts/Controllers/LogController.cs
+  artifactKey: Guid(80afb9efa4f248d9af66c69d0e46a95c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scripts/Controllers/LogController.cs using Guid(80afb9efa4f248d9af66c69d0e46a95c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e68ae875ab278716b08b05d72d7ca496') in 0.010801 seconds 
+  Import took 0.014083 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.309809 seconds.
+  path: Assets/_Scripts/Controllers/PlayerController.cs
+  artifactKey: Guid(dd7cc66a781f32e499f90b5659b2cde8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scripts/Controllers/PlayerController.cs using Guid(dd7cc66a781f32e499f90b5659b2cde8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9afc5cb10047e61bad10204b556d3d3') in 0.010088 seconds 
+  Import took 0.013539 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.065567 seconds.
+  path: Assets/_Scripts/Controllers/WeaponController.cs
+  artifactKey: Guid(fe00a1675eaf414c8a683cb2c4c67101) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scripts/Controllers/WeaponController.cs using Guid(fe00a1675eaf414c8a683cb2c4c67101) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '757abe91bf97a01ec9e969702ebef4be') in 0.012672 seconds 
+  Import took 0.017537 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.723169 seconds.
+  path: Assets/Scenes/New Folder
+  artifactKey: Guid(057fe528ed973ec49aae9788086a33de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/New Folder using Guid(057fe528ed973ec49aae9788086a33de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c2d55e600f5e6c39bcd2f5287f5b167') in 0.010111 seconds 
+  Import took 0.014332 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 35.777915 seconds.
+  path: Assets/Scenes/GameScene.unity
+  artifactKey: Guid(fdd0f0a32c3aaab478c0635e4adc85fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/GameScene.unity using Guid(fdd0f0a32c3aaab478c0635e4adc85fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc1e5cf78e0a55716ab77e177c51da78') in 0.027728 seconds 
+  Import took 0.031140 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1292.429298 seconds.
+  path: Assets/AssetsStore/Low Poly Guns
+  artifactKey: Guid(48910aafac678aa49afa50976d017c82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetsStore/Low Poly Guns using Guid(48910aafac678aa49afa50976d017c82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '473d684dc2986b667c027b96a30504f5') in 0.042776 seconds 
+  Import took 0.120563 seconds .
+
