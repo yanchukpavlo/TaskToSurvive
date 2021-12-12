@@ -16,48 +16,50 @@ namespace StarterAssets
 	{
 		[Header("Player")]
 		[Tooltip("Move speed of the character in m/s")]
-		public float MoveSpeed = 2.0f;
+		[SerializeField] float MoveSpeed = 2.0f;
 		[Tooltip("Sprint speed of the character in m/s")]
-		public float SprintSpeed = 5.335f;
+		[SerializeField] float SprintSpeed = 5.335f;
 		[Tooltip("How fast the character turns to face movement direction")]
 		[Range(0.0f, 0.3f)]
-		public float RotationSmoothTime = 0.12f;
+		[SerializeField] float RotationSmoothTime = 0.12f;
 		[Tooltip("Acceleration and deceleration")]
-		public float SpeedChangeRate = 10.0f;
+		[SerializeField] float SpeedChangeRate = 10.0f;
+		[Tooltip("Camera rotation sensiitivity")]
+		[SerializeField] float Sensiitivity = 1.0f;
 
 		[Space(10)]
 		[Tooltip("The height the player can jump")]
-		public float JumpHeight = 1.2f;
+		[SerializeField] float JumpHeight = 1.2f;
 		[Tooltip("The character uses its own gravity value. The engine default is -9.81f")]
-		public float Gravity = -15.0f;
+		[SerializeField] float Gravity = -15.0f;
 
 		[Space(10)]
 		[Tooltip("Time required to pass before being able to jump again. Set to 0f to instantly jump again")]
-		public float JumpTimeout = 0.50f;
+		[SerializeField] float JumpTimeout = 0.50f;
 		[Tooltip("Time required to pass before entering the fall state. Useful for walking down stairs")]
-		public float FallTimeout = 0.15f;
+		[SerializeField] float FallTimeout = 0.15f;
 
 		[Header("Player Grounded")]
 		[Tooltip("If the character is grounded or not. Not part of the CharacterController built in grounded check")]
-		public bool Grounded = true;
+		[SerializeField] bool Grounded = true;
 		[Tooltip("Useful for rough ground")]
-		public float GroundedOffset = -0.14f;
+		[SerializeField] float GroundedOffset = -0.14f;
 		[Tooltip("The radius of the grounded check. Should match the radius of the CharacterController")]
-		public float GroundedRadius = 0.28f;
+		[SerializeField] float GroundedRadius = 0.28f;
 		[Tooltip("What layers the character uses as ground")]
-		public LayerMask GroundLayers;
+		[SerializeField] LayerMask GroundLayers;
 
 		[Header("Cinemachine")]
 		[Tooltip("The follow target set in the Cinemachine Virtual Camera that the camera will follow")]
-		public GameObject CinemachineCameraTarget;
+		[SerializeField] GameObject CinemachineCameraTarget;
 		[Tooltip("How far in degrees can you move the camera up")]
-		public float TopClamp = 70.0f;
+		[SerializeField] float TopClamp = 70.0f;
 		[Tooltip("How far in degrees can you move the camera down")]
-		public float BottomClamp = -30.0f;
+		[SerializeField] float BottomClamp = -30.0f;
 		[Tooltip("Additional degress to override the camera. Useful for fine tuning camera position when locked")]
-		public float CameraAngleOverride = 0.0f;
+		[SerializeField] float CameraAngleOverride = 0.0f;
 		[Tooltip("For locking the camera position on all axis")]
-		public bool LockCameraPosition = false;
+		[SerializeField] bool LockCameraPosition = false;
 
 		// cinemachine
 		private float _cinemachineTargetYaw;
@@ -90,6 +92,7 @@ namespace StarterAssets
 		private const float _threshold = 0.01f;
 
 		private bool _hasAnimator;
+		private bool _rotateOnMove;
 
 		private void Awake()
 		{
@@ -154,8 +157,8 @@ namespace StarterAssets
 			// if there is an input and camera position is not fixed
 			if (_input.look.sqrMagnitude >= _threshold && !LockCameraPosition)
 			{
-				_cinemachineTargetYaw += _input.look.x * Time.deltaTime;
-				_cinemachineTargetPitch += _input.look.y * Time.deltaTime;
+				_cinemachineTargetYaw += _input.look.x * Time.deltaTime * Sensiitivity;
+				_cinemachineTargetPitch += _input.look.y * Time.deltaTime * Sensiitivity;
 			}
 
 			// clamp our rotations so our values are limited 360 degrees
@@ -210,7 +213,7 @@ namespace StarterAssets
 				float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, _targetRotation, ref _rotationVelocity, RotationSmoothTime);
 
 				// rotate to face input direction relative to camera position
-				transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
+				if (_rotateOnMove) transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
 			}
 
 
@@ -294,6 +297,16 @@ namespace StarterAssets
 			{
 				_verticalVelocity += Gravity * Time.deltaTime;
 			}
+		}
+
+		public void SetSensiitivity(float value)
+        {
+			Sensiitivity = value;
+		}
+		
+		public void SetRotateOnMove(bool value)
+        {
+			_rotateOnMove = value;
 		}
 
 		private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
