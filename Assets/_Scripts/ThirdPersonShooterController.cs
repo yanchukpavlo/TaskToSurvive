@@ -68,6 +68,7 @@ public class ThirdPersonShooterController : MonoBehaviour
                 fireTime = Time.time + fireRate;
                 Vector3 aimDir = (targetTr.position - spawnBulletTr.position).normalized;
                 Instantiate(bulletPrefab, spawnBulletTr.position, Quaternion.LookRotation(aimDir, Vector3.up));
+                CameraController.Instance.ShakeAimCamera();
             }
         }
         else
