@@ -16,10 +16,10 @@ public class ThirdPersonShooterController : MonoBehaviour
     [SerializeField] float targetMoveStep = 0.1f;
     [SerializeField] float animLayerChangeWaigthSpeed = 0.1f;
     [SerializeField] float fireRate = 0.1f;
-    [SerializeField] GameObject bulletPrefab;
     [SerializeField] Transform spawnBulletTr;
     [SerializeField] Rig aimRig;
     [SerializeField] Transform targetTr;
+    [SerializeField] ParticleSystem muzzleFlashe;
 
     float fireTime;
     float animWeigth;
@@ -67,8 +67,9 @@ public class ThirdPersonShooterController : MonoBehaviour
             {
                 fireTime = Time.time + fireRate;
                 Vector3 aimDir = (targetTr.position - spawnBulletTr.position).normalized;
-                Instantiate(bulletPrefab, spawnBulletTr.position, Quaternion.LookRotation(aimDir, Vector3.up));
+                ObjectPooler.Instance.GetFromPool(PoolType.PlayerBullet, spawnBulletTr.position, Quaternion.LookRotation(aimDir, Vector3.up));
                 CameraController.Instance.ShakeAimCamera();
+                muzzleFlashe.Play();
             }
         }
         else

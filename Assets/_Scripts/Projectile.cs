@@ -6,6 +6,9 @@ public class Projectile : MonoBehaviour
 {
     [SerializeField] int damage = 5;
     [SerializeField] float speed = 10f;
+    [SerializeField] float timer = .5f;
+    [SerializeField] GameObject spark;
+    [SerializeField] GameObject visual;
 
     Rigidbody rb;
 
@@ -21,14 +24,27 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
         if (other.TryGetComponent<IDamageable>(out IDamageable damageable))
         {
             damageable.TakeDamege(damage);
-            Destroy(gameObject);
+            StartCoroutine(MakeSparksAndOff());
         }
         else
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
+    }
+
+    IEnumerator MakeSparksAndOff()
+    {
+        visual.SetActive(false);
+        spark.SetActive(true);
+        yield return new WaitForSeconds(timer);
+        visual.SetActive(true);
+        spark.SetActive(false);
+        gameObject.SetActive(false);
+        //go to pull
     }
 }
