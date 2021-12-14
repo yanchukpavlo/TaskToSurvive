@@ -44,6 +44,7 @@ public class ObjectPooler : MonoBehaviour
 
         GameObject objFromPool = poolDictionary[type].Dequeue();
 
+        objFromPool.SetActive(false);
         objFromPool.transform.position = position;
         objFromPool.transform.rotation = rotation;
         objFromPool.SetActive(true);
@@ -65,9 +66,4 @@ public class Pool
     public PoolType type;
     public GameObject prefab;
     public int size;
-}
-
-public enum PoolType
-{
-    PlayerBullet
 }

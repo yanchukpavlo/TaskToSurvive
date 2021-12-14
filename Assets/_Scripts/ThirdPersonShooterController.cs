@@ -8,17 +8,26 @@ using UnityEngine.Animations.Rigging;
 [RequireComponent(typeof(Animator))]
 public class ThirdPersonShooterController : MonoBehaviour
 {
+    [Header("Camera")]
     [SerializeField] CinemachineVirtualCamera aimCinemachineCamera;
     [SerializeField] float normalSensiitivity = 1f;
     [SerializeField] float aimSensiitivity = 0.7f;
+
+    [Header("Target")]
     [SerializeField] LayerMask aimColliderLayer;
-    [SerializeField] float rotationStep = 0.1f;
+    [SerializeField] Transform targetTr;
     [SerializeField] float targetMoveStep = 0.1f;
-    [SerializeField] float animLayerChangeWaigthSpeed = 0.1f;
+    [SerializeField] float rotationStep = 0.1f;
+
+    [Header("Shooting")]
     [SerializeField] float fireRate = 0.1f;
     [SerializeField] Transform spawnBulletTr;
+
+    [Header("Animation")]
+    [SerializeField] float animLayerChangeWaigthSpeed = 0.1f;
     [SerializeField] Rig aimRig;
-    [SerializeField] Transform targetTr;
+
+    [Header("FX")]
     [SerializeField] ParticleSystem muzzleFlashe;
 
     float fireTime;
@@ -36,6 +45,7 @@ public class ThirdPersonShooterController : MonoBehaviour
         animator = GetComponent<Animator>();
         assetsInputs = GetComponent<StarterAssetsInputs>();
 
+        targetTr.parent = null;
         screenCenterPoint = new Vector2(Screen.width/2f, Screen.height/2f);
     }
 
@@ -65,11 +75,7 @@ public class ThirdPersonShooterController : MonoBehaviour
 
             if (fireTime < Time.time && assetsInputs.shoot)
             {
-                fireTime = Time.time + fireRate;
-                Vector3 aimDir = (targetTr.position - spawnBulletTr.position).normalized;
-                ObjectPooler.Instance.GetFromPool(PoolType.PlayerBullet, spawnBulletTr.position, Quaternion.LookRotation(aimDir, Vector3.up));
-                CameraController.Instance.ShakeAimCamera();
-                muzzleFlashe.Play();
+                Shoot();
             }
         }
         else
@@ -82,5 +88,14 @@ public class ThirdPersonShooterController : MonoBehaviour
         animWeigth = Mathf.Clamp01(animWeigth);
         animator.SetLayerWeight(1, animWeigth);
         aimRig.weight = animWeigth;
+    }
+
+    void Shoot()
+    {
+        fireTime = Time.time + fireRate;
+        Vector3 aimDir = (targetTr.position - spawnBulletTr.position).normalized;
+        ObjectPooler.Instance.GetFromPool(PoolType.PlayerBullet, spawnBulletTr.position, Quaternion.LookRotation(aimDir, Vector3.up));
+        CameraController.Instance.ShakeAimCamera();
+        muzzleFlashe.Play();
     }
 }

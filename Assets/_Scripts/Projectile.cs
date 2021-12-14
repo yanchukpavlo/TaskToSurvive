@@ -19,6 +19,7 @@ public class Projectile : MonoBehaviour
 
     private void OnEnable()
     {
+        spark.SetActive(false);
         rb.velocity = transform.forward * speed;
     }
 
@@ -45,6 +46,5 @@ public class Projectile : MonoBehaviour
         visual.SetActive(true);
         spark.SetActive(false);
         gameObject.SetActive(false);
-        //go to pull
     }
 }
