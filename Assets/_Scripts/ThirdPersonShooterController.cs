@@ -45,7 +45,6 @@ public class ThirdPersonShooterController : MonoBehaviour
         animator = GetComponent<Animator>();
         assetsInputs = GetComponent<StarterAssetsInputs>();
 
-        targetTr.parent = null;
         screenCenterPoint = new Vector2(Screen.width/2f, Screen.height/2f);
     }
 
